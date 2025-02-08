@@ -1,401 +1,104 @@
 <!DOCTYPE html>
-<html lang="es-mx" translate="no">
+<html lang="en" translate="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Web (En Venta)</title>
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/687/687259.png" type="image/x-icon">
+    <title>ERROR 404 (Not Found)</title>
+    <link rel="icon" href="https://scontent-qro1-2.cdninstagram.com/v/t51.2885-19/473755564_1626132277992261_218217860960966617_n.jpg?_nc_ht=scontent-qro1-2.cdninstagram.com&_nc_cat=109&_nc_oc=Q6cZ2AFX50ok3yqyuHZq8dO3JXhGXbGqv1--JA_NOjfs3ueSCSTtqbQsDv2mKWWYxHNmjzvS9A7ZETwJ4b51nEmUhiEN&_nc_ohc=Bhfw19C07R0Q7kNvgEOfmz-&_nc_gid=8922d9a30039465581cd4d742951d663&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AYCiNufO6FaH4gATY_CWJNuMHLfs7QdMBS2UucWZ19TPsw&oe=67AC8E2A&_nc_sid=7a9f4b" type="image/x-icon">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            color: #333;
+            font-family: arial, sans-serif;
             margin: 0;
             padding: 0;
-        }
-        header {
-            background-color: white;
-            color: black;
-            text-align: left;
-            padding: 1rem 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        .piojo {
-            height: 3.3cm;
-            background: black;
-        }
-        nav {
+            min-height: 100vh;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            padding: 1rem 2rem;
+            justify-content: center;
+            background-color: white;
         }
-        h1 {
-            margin-bottom: 0;
-            display: auto;
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        a {
-            text-decoration: none;
+
+        p {
             color: black;
         }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
+      
+        p span {
+            color: #5f6368;
         }
-        .subtitle {
-            font-style: italic;
-            margin-top: 0;
-        }
+
         .logo {
-            color: black;
-            text-decoration: none;
-            transition: color 0.3s ease;
+            margin-bottom: 20px;
         }
-        .logo-p {
+
+        .content {
+            display: flex;
+            align-items: flex-start;
+            gap: 50px;
+            padding: 20px;
+        }
+
+        .error-text h1 {
+            font-size: 20px;
+            font-weight: normal;
+            margin-bottom: 16px;
+        }
+
+        .error-text h1 span {
+            color: #5f6368;
+            margin-left: 8px;
+        }
+
+        .error-text p {
+            color: black;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .error-text p span {
+            color: #5f6368;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .robot-image {
+            width: 200px;
+            height: 200px;
+        }
+
+        .logo {
             width: 50px;
             height: 50px;
-            border-radius: 12.5%;
-            gap: 5px; /* Espacio entre el logo y el texto */
-        }
-        .nav-links {
-            list-style: none;
-            display: flex; /* Alinear horizontalmente en pantallas grandes */
-            margin: 0;
-            padding: 0;
+            border-radius: 50%;
         }
 
-        .nav-links li {
-            margin-left: 1.5rem;
-        }
-
-        .nav-links a {
-            color: black;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: gray;
-        }
-        .hamburger {
-            display: none;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 0.5rem;
-        }
-        .hamburger-line {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background-color: black;
-            margin: 5px 0;
-            transition: all 0.3s ease-in-out;
-        }
-        .a1 {
-            font-family: Merriweather, serif;
-        }
-        .a2-1 {
-            font-family: Arial, sans-serif;
-        }
-        .a1-2 {
-            background-color: darkgray;
-            font-family: Arial, sans-serif;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 1rem;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-        }
-        .hero {
-            background-image: url('https://images.unsplash.com/photo-1493515322954-4fa727e97985?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Rm9uZG9zJTIwZGUlMjBwYW50YWxsYSUyMGRlJTIwbGElMjBjYWxsZXxlbnwwfHwwfHx8MA%3D%3D');
-            background-size: cover;
-            background-position: center;
-            font-family: Merriweather, serif;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .hero button {
-            background-color: white;
-            color: #333;
-            border: none;
-            padding: 0.5rem 1rem;
-            font-size: 1rem;
-            cursor: pointer;
-        }
-        .featured-products {
-            padding: 2rem;
-            background-color: #f8f8f8;
-        }
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-        .product {
-            position: relative;
-            background-color: white;
-            padding: 1rem;
-            text-align: center;
-            text-decoration: none;
-            color: black;
-        }
-        .product img {
-            position: relative;
-            max-width: 100%;
-            height: auto;
-            filter: blur(10px);
-        }
-        /* El texto sobre la imagen */  
-        .product .overlay-text {
-            position: absolute;
-            top: 50%; /* Centrar verticalmente */
-            left: 50%; /* Centrar horizontalmente */
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 1rem;
-            font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-            padding: 0.5rem;
-            border-radius: 5px;
-            cursor: default;
-        }
-        .collection-showcase {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .collection {
-            flex: 1 1 300px;
-            position: relative;
-            height: 400px;
-        }
-        .collection img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .collection button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            color: #333;
-            border: none;
-            padding: 0.5rem 1rem;
-            font-size: 1rem;
-            cursor: pointer;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .logo-image {
-            width: 20px;
-            height: 20px;
-            border-radius: 12.5%;
-        }
-        footer {
-            background-color: #333;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
-        }
-        .footer-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px; /* Espacio entre el logo y el texto */
-        }
         @media (max-width: 768px) {
-            .hamburger {
-                display: block;
-            }
-            .nav-links1 {
-                list-style: none;
-                display: list-item;
-            }
-            .nav-links1 li {
-                margin-left: 1.5rem;
-                margin-top: 0.5rem;
-            }
-            .nav-links1 a {
-                color: #fff;
-                text-decoration: none;
-                transition: color 0.3s ease;
-                border-left: 2px solid rgb(129, 129, 129);
-                padding-left: 5px;
-            }
-            .nav-links1 a:hover {
-                color: rgb(55, 0, 255);;
-                border-left: 2px solid rgb(55, 0, 255);
-                padding-left: 5px;
-            }
-            .nav-links {
-                display: none;
+            .content {
                 flex-direction: column;
-                position: absolute;
-                top: 100px;
-                left: 0;
-                width: 100%;
-                background-color: white;
-                padding: 1rem;
+                align-items: center;
+                text-align: center;
             }
-            .nav-links.show {
-                display: flex;
-            }
-            .nav-links li {
-                margin: 1rem 0;
-            }
-            .hamburger.active .hamburger-line:nth-child(1) {
-                transform: rotate(45deg) translate(5px, 5px);
-            }
-            .hamburger.active .hamburger-line:nth-child(2) {
-                opacity: 0;
-            }
-            .hamburger.active .hamburger-line:nth-child(3) {
-                transform: rotate(-45deg) translate(5px, -5px);
-            }
-            .nav-links {
-                display: none;
+
+            .robot-image {
+                width: 150px;
+                height: 150px;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">
-              <img src="https://ciep.mx/wp-content/uploads/2019/09/placeholder.png" height="75px" width="75px" alt="Logo" class="logo-p">
+    <div class="content">
+        <div class="error-text">
+            <div style="display: flex; align-items: center;">
+                <img src="https://dev-bit-oficial-with-programmer-hugo.github.io/ERROR/404/logo.png" class="logo">
+                <p style="font-size: 24px; margin: 0 10px;">X</p>
+                <img src="https://dev-bit-oficial-with-programmer-hugo.github.io/ERROR/404/programmer-hugo-logo.png" class="logo">
             </div>
-            <button class="hamburger" aria-label="Menú de navegación">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="https://asl-shop.github.io/inicio/" class="a1">Inicio</a></li>
-                <li><a href="#?productos" class="a2-1">Productos</a></li>
-                <li><a href="#?colecciones" class="a2-2">Colecciones</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="piojo"></section>
-      
-        <section class="hero">
-            <div>
-                <h1>Bienvenido a [Nombre], donde tus ideas cobran vida.</h1>
-                <a href="#?productos">
-                    <button>Descubrir</button>
-                </a>
-            </div>
-        </section>
-
-        <section id="?productos" class="featured-products">
-            <h2>Productos Destacados</h2>
-            <div class="product-grid">
-                <a href="https://asl-shop.github.io/inicio/product=a1a1a1">
-                    <div class="product">
-                        <img src="https://guerreros.mx/wp-content/uploads/2022/09/gorra-n-c-b-1.jpg" width="300" height="400" alt="Producto">
-                        <div class="overlay-text">Sin derechos de autor</div>
-                        <h3>Producto 1</h3>
-                        <p>$0,00</p>
-                    </div>
-                </a>
-                <a href="https://asl-shop.github.io/inicio/product=a1a1a1">
-                    <div class="product">
-                        <img src="https://guerreros.mx/wp-content/uploads/2022/09/gorra-n-c-b-1.jpg" width="300" height="400" alt="Producto">
-                        <div class="overlay-text">Sin derechos de autor</div>
-                        <h3>Producto 1</h3>
-                        <p>$0,00</p>
-                    </div>
-                </a>
-                <a href="https://asl-shop.github.io/inicio/product=a1a1a1">
-                    <div class="product">
-                        <img src="https://guerreros.mx/wp-content/uploads/2022/09/gorra-n-c-b-1.jpg" width="300" height="400" alt="Producto">
-                        <div class="overlay-text">Sin derechos de autor</div>
-                        <h3>Producto 1</h3>
-                        <p>$0,00</p>
-                    </div>
-                </a>
-                <a href="https://asl-shop.github.io/inicio/product=a1a1a1">
-                    <div class="product">
-                        <img src="https://guerreros.mx/wp-content/uploads/2022/09/gorra-n-c-b-1.jpg" width="300" height="400" alt="Producto">
-                        <div class="overlay-text">Sin derechos de autor</div>
-                        <h3>Producto 1</h3>
-                        <p>$0,00</p>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <section id="?colecciones" class="collection-showcase" style="display: none;">
-            <div class="collection">
-                <img src="https://via.placeholder.com/800x600" alt="Colección Mujer">
-                <button>Ver Colección Mujer</button>
-            </div>
-            <div class="collection">
-                <img src="https://via.placeholder.com/800x600" alt="Colección Hombre">
-                <button>Ver Colección Hombre</button>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <img src="https://ciep.mx/wp-content/uploads/2019/09/placeholder.png" alt="ASL" class="logo-image">
-            <p style="color: white;">© 2025 DevBit. Todos los Derechos Reservados.</p>
+            <h1>404. <span>Not Found</span></h1>
+            <p>There isn't DevBit & ProgrammerHugo site here.</p>
+            <p><span>Check that the URL is written correctly.</span></p>
         </div>
-    </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
 
-            hamburger.addEventListener('click', function() {
-                this.classList.toggle('active');
-                navLinks.classList.toggle('show');
-            });
-
-            // Close menu when a link is clicked
-            navLinks.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger.classList.remove('active');
-                    navLinks.classList.remove('show');
-                });
-            });
-        });
-    </script>
+        <img src="https://dev-bit-oficial-with-programmer-hugo.github.io/ERROR/404/robot.png" alt="Robot illustration" class="robot-image">
+    </div>
 </body>
 </html>
